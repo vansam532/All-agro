@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="VEDANT AI — Your bilingual AI assistant for learning and business.">
+  <title>VEDANT AI</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark">V</div><div><strong>VEDANT AI</strong><small>Learn · Create · Grow</small></div></div>
+      <button id="new-chat" class="new-chat">＋ New chat</button>
+      <div class="side-label">YOUR ASSISTANT</div>
+      <div class="feature"><span>✦</span><div><b>AI Chat</b><small>Hindi & English</small></div></div>
+      <div class="feature"><span>▤</span><div><b>PDF Assistant</b><small>Ask from your document</small></div></div>
+      <div class="side-note"><b>Built for your next step.</b><p>Learn new skills, explore ideas, and plan your work with VEDANT AI.</p></div>
+      <div class="owner">Created by <b>VIKAS_HINDU</b></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><button id="menu-toggle" class="mobile-menu" aria-label="Toggle menu">☰</button><div><span class="status-dot"></span> <span id="status-text">AI assistant</span></div><div class="model-pill">Gemini 3.1 Pro</div></header>
+      <section class="chat-area" id="chat-area">
+        <div class="welcome" id="welcome">
+          <div class="welcome-icon">✦</div>
+          <p class="eyebrow">WELCOME TO VEDANT AI</p>
+          <h1>Your ideas.<br><span>One intelligent assistant.</span></h1>
+          <p class="welcome-copy">Ask a question, learn a skill, or upload a PDF to get started.</p>
+          <div class="suggestions">
+            <button class="suggestion" data-prompt="Explain a difficult topic in simple Hindi."><span>◈</span><b>Learn something</b><small>Explain a topic in simple Hindi</small></button>
+            <button class="suggestion" data-prompt="Help me create a practical business plan."><span>↗</span><b>Build a business plan</b><small>Turn an idea into clear steps</small></button>
+            <button class="suggestion" data-prompt="Create a 7-day study plan for me."><span>▦</span><b>Plan my learning</b><small>Make a simple study schedule</small></button>
+          </div>
+        </div>
+        <div id="messages" class="messages" aria-live="polite"></div>
+      </section>
+      <div class="composer-wrap">
+        <div id="pdf-chip" class="pdf-chip" hidden><span>▤</span><span id="pdf-name"></span><button id="remove-pdf" aria-label="Remove PDF">×</button></div>
+        <form id="chat-form" class="composer">
+          <label class="upload-button" for="pdf-input" title="Upload PDF">＋</label>
+          <input id="pdf-input" type="file" accept="application/pdf,.pdf" hidden>
+          <textarea id="message-input" rows="1" placeholder="Message VEDANT AI… / अपना सवाल लिखें" aria-label="Message VEDANT AI"></textarea>
+          <button id="send-button" type="submit" aria-label="Send message">↑</button>
+        </form>
+        <p class="disclaimer">AI can make mistakes. Verify important information. Your API key stays on the server.</p>
+      </div>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
